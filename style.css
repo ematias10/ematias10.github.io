@@ -1,0 +1,182 @@
+:root{
+    --color1: #031716 ;
+    --color2: #032f30 ;
+    --color3: #0a7075 ;
+    --color4: #0c969c ;
+    --color5: #6ba3be ;
+    --color6: #274d60 ;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color6), var(--color4)); /* Ajusta los colores del gradiente */
+    background-attachment: fixed; /* Fija el fondo para que no se desplace */
+    background-size: cover;
+    font-family: Arial, sans-serif; /* Fuente opcional */
+}
+.navbar{
+    background-color: var(--color2);
+    
+}
+
+.nav-link{
+    color: whitesmoke;
+}
+.principal{
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 8rem 0 6rem 0;
+}
+
+section{
+    padding: 4rem 0 0 0;
+}
+
+.person-img{
+    width: 100%;
+    max-width: 300px;
+    border: 12px solid var(--color5);
+}
+.principal-container{
+max-width: 1320px;
+margin: auto;
+width: 75%;
+}
+
+.principal-title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-h2{
+    font-size: 2rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+.section-h5{
+    font-size: 1rem;
+    text-align: left;
+    
+}
+
+
+@media only screen and (max-width: 525px) {
+.principal-title{
+    font-size: 2.7rem;
+}
+  }
+
+.tecnologias{
+    width: 75%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding-block: 10px;
+    background: var(--color5);
+    border-radius: 2rem 0 2rem 0;
+    color: whitesmoke;
+
+}
+
+.tecnologias-table{
+    gap: 8px;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+.icon{
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.icon:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+}
+
+/* Tooltip */
+.icon::after {
+    content: attr(data-tooltip); /* Extrae el texto del atributo "data-tooltip" */
+    position: absolute;
+    bottom: -30px; /* Ubica el tooltip debajo del icono */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    pointer-events: none; /* Evita que el tooltip interrumpa el hover */
+    z-index: 10;
+}
+
+/* Muestra el tooltip en hover */
+.icon:hover::after {
+    opacity: 1;
+}
+
+
+.exp-laboral{
+    max-width: 1320px;
+    margin: auto;
+    width: 75%;
+}
+
+
+#carouselExample {
+    background-color: transparent; /* Fondo del carrusel transparente */
+}
+
+.carousel-inner {
+    background-color: transparent; /* Fondo de las diapositivas transparente */
+}
+
+.carousel-item {
+    background-color: transparent; /* Fondo de cada elemento del carrusel transparente */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Opcional: Estilo de los botones de navegación */
+    width: 5%;
+}
+
+.carousel-control-next{
+    border-radius: 0 1rem 1rem 0;
+}
+.carousel-control-prev{
+    border-radius: 1rem 0 0 1rem;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: white; /* Color de los íconos de navegación */
+}
+
+.list-group{
+    height: 100%;
+    width: 90%;
+    border-radius: 0;
+    
+    --bs-list-group-bg: var(--color2);
+    --bs-list-group-border-color:var(--color1);
+}
+.list-group-item{
+    height: 100%;
+    color: whitesmoke;
+}
+.list-group-item.span{
+font-weight: bold;
+} 
